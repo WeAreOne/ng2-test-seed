@@ -3,10 +3,6 @@
   "version": "0.0.2",
   "description": "Setup seed for Angular 2 application",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/angular/ng-test-seed.git"
-  },
   "scripts": {
     "postinstall": "typings install --ambient",
     "clean": "rimraf built/",

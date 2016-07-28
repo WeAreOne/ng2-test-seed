@@ -31,3 +31,5 @@ built/
 
 # Typescript typings
 typings/
+
+.idea/
