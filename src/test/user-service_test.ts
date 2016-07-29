@@ -12,36 +12,36 @@ describe('user service', () => {
 
   it('should validate pins', inject([UserService], (service) => {
     service.pin = 12345;
-    expect(service.isValidPin()).toBe(false);
+    //expect
 
     service.pin = 0;
-    expect(service.isValidPin()).toBe(true);
+    //expect
 
     service.pin = 9999;
-    expect(service.isValidPin()).toBe(true);
+    //expect
 
     service.pin = -50;
-    expect(service.isValidPin()).toBe(false);
-  }));
+    //expect
+ }));
 
   it('should greet when pin is wrong', async(inject([UserService], (service) => {
     service.pin = 9999;
     service.getGreeting().then((greeting) => {
-      expect(greeting).toEqual('Login failure!');
+      //expect
     });
   })), 3000);
 
   it('should greet when pin is right', async(inject([UserService], (service) => {
     service.pin = 2015;
     service.getGreeting().then((greeting) => {
-      expect(greeting).toEqual('Welcome!');
+      //expect
     });
   })), 3000);
 });
 
 class MockLoginService extends LoginService {
   login(pin: number) {
-    return Promise.resolve(true);
+    //return ...
   }
 }
 
