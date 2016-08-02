@@ -23,7 +23,7 @@ describe('greeting component', () => {
 
   beforeEach(() => {
     addProviders([
-      provide(LoginService, { useClass: MockLoginService }),
+      {provide: LoginService, useClass: MockLoginService },
       UserService
     ]);
   });
@@ -39,7 +39,7 @@ describe('greeting component', () => {
 
 
       expect(compiled).toContainText('Enter PIN');
-      expect(compiled.querySelector('h3')).toHaveText('Status: Enter PIN');
+      //expect h3 to have text 'Status: Enter PIN'
     });
   }));
 
@@ -51,7 +51,7 @@ describe('greeting component', () => {
 
       fixture.detectChanges();
       var compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('h3')).toHaveText('Status: Foobar');
+      //expect h3 to have text 'Status: Foobar'
     });
   }));
 
@@ -61,7 +61,7 @@ describe('greeting component', () => {
           fixture.detectChanges();
 
           var compiled = fixture.debugElement.nativeElement;
-          expect(compiled).toHaveText('Enter PIN');
+          //expect native element to have text  'Enter PIN'
         });
       }));
 
@@ -73,7 +73,7 @@ describe('greeting component', () => {
 
       fixture.debugElement.componentInstance.pending.then(() => {
         fixture.detectChanges();
-        expect(compiled.querySelector('h3')).toHaveText('Status: Welcome!');
+        //expect h3 to have text 'Status: Welcome!'
       });
     });
   }));
@@ -89,6 +89,6 @@ describe('greeting component', () => {
 
     tick();
     fixture.detectChanges();
-    expect(compiled.querySelector('h3')).toHaveText('Status: Welcome!');
+    //expect h3 to have text 'Status: Welcome!'
   }));
 });

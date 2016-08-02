@@ -23,7 +23,7 @@ describe('SpotifyService', () => {
   let EXPECTED_NAME = 'felipe'
   function expectURL(backend: MockBackend, url: string) {
     backend.connections.subscribe(c => {
-      expect(c.request.url).toBe(url);
+      //expect request url to be equals to url
       let response = new ResponseOptions({body: `{"name": "${EXPECTED_NAME}"}`});
       c.mockRespond(new Response(response));
     });

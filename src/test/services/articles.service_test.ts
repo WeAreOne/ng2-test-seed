@@ -21,7 +21,7 @@ describe('ArticlesService', () => {
             inject([ArticlesService], fakeAsync((service) => {
                 var res;
                 service.getArticles().then(_res => { res = _res;})
-                tick(5000);
+                // fake wait 5 seconds
                 //expect size of array to be 2
             }))
         );
