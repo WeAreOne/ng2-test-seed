@@ -11,4 +11,9 @@ describe('my first test', () => {
         page.navigateTo();
         expect(page.getParagraphText()).toEqual('PIN Machine')
     })
+
+    it('should show correct pin code into input', () => {
+        page.navigateTo();
+        expect(page.pinInput()).toEqual('1234')
+    })
 })
