@@ -5,6 +5,7 @@ import {BorderComponent} from './border-component';
 @Component({
   selector: 'my-app',
   template: `
+    <h1>PIN Machine</h1>
     <my-fancy-border title="The PIN Machine">
       <my-greeting></my-greeting>
     </my-fancy-border>
