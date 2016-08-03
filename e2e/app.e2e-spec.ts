@@ -16,4 +16,10 @@ describe('my first test', () => {
         page.navigateTo();
         expect(page.pinInput()).toEqual('1234')
     })
+
+    it('should type pin code 2015', () => {
+        page.navigateTo();
+        page.typePin('2015');
+        expect(page.pinInput()).toEqual('2015')
+    })
 })

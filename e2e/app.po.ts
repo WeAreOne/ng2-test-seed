@@ -10,4 +10,10 @@ export class Ng2HttpPage {
     pinInput() {
         return element(by.css('my-app input[type="number"]')).getAttribute('value');
     }
+
+    typePin(code) {
+        let el = element(by.css('my-app input[type="number"]'));
+        el.clear();
+        el.sendKeys(code);
+    }
 }
