@@ -1,19 +1,17 @@
 export class Ng2HttpPage {
     navigateTo() {
-        return browser.get('/');
+        return /* implement me */;
     }
 
     getParagraphText() {
-        return element(by.css('my-app h1')).getWebElement().getText();
+        return /* implement me */;
     }
 
     pinInput() {
-        return element(by.css('my-app input[type="number"]')).getWebElement().getAttribute('value');
+        return /* implement me */;
     }
 
     typePin(code) {
-        let el = element(by.css('my-app input[type="number"]')).getWebElement();
-        el.clear();
-        el.sendKeys(code);
+        /* implement me */
     }
 }
