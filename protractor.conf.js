@@ -27,6 +27,8 @@ exports.config = {
         });
     },
     onPrepare: function() {
+        require('reflect-metadata');
+        require("zone.js/dist/zone-node");
         jasmine.getEnv().addReporter(new SpecReporter());
     }
 };
